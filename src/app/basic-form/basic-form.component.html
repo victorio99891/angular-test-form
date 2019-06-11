@@ -1,0 +1,32 @@
+<div class="top box">
+  {{ basicFormControl.basicFormGroup.value | json }}
+</div>
+<div class="top box">
+  <my-input-text
+    [inputFormControl]="basicFormControl.nameFormControl"
+    [labelText]="'Name: '"
+  ></my-input-text>
+</div>
+<div class="top box">
+  <my-input-text
+    [inputFormControl]="basicFormControl.lastNameFormControl"
+    [labelText]="'Lastname: '"
+  ></my-input-text>
+</div>
+<div class="top box">
+  <my-input-number
+    [inputFormControl]="basicFormControl.ageFormControl"
+    [labelText]="'Age: '"
+  ></my-input-number>
+</div>
+<div class="box">
+  <my-select-list
+    [inputFormControl]="basicFormControl.roleFormControl"
+    [labelText]="'Role: '"
+    [options]="roleList"
+  ></my-select-list>
+</div>
+<div style="align-content: center; text-align: center; margin-top: 25px;">
+  <button (click)="submit()">Submit form!</button>
+</div>
+

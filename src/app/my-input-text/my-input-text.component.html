@@ -1,0 +1,15 @@
+<div>
+  <label>{{ labelText }}</label>
+  <input type="text" [formControl]="inputFormControl" />
+</div>
+<div>
+  <label style="color: red;">
+    <span
+      *ngIf="
+        inputFormControl.invalid &&
+        (inputFormControl.touched || inputFormControl.dirty)
+      "
+      >Something is wrong!</span
+    >
+  </label>
+</div>
