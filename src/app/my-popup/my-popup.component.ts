@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, OnDestroy } from '@angular/core';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -6,9 +6,12 @@ import { Component, OnInit, Input, ElementRef } from '@angular/core';
   templateUrl: './my-popup.component.html',
   styleUrls: ['./my-popup.component.css']
 })
-export class MyPopupComponent implements OnInit {
+export class MyPopupComponent implements OnInit, OnDestroy {
   @Input()
   closeWhenOutOfFocus: boolean = true;
+
+  @Input()
+  showClose: boolean = false;
 
   @Input()
   public title: string;

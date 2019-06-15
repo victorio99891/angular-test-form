@@ -2,7 +2,7 @@
   <div *ngIf="title" class="h1">{{ title }}</div>
   <div class="popup-body">
     <div>
-      <span class="exit" (click)="close()">&#10060;</span>
+      <span *ngIf="showClose" class="exit" (click)="close()">&#10060;</span>
     </div>
     <div>
       <ng-content></ng-content>
