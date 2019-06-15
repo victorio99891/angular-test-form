@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BasicFormControl } from './basic-form-control';
 import { Router } from '@angular/router';
+import { MyPopupComponent } from './../my-popup/my-popup.component';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -10,6 +11,9 @@ import { Router } from '@angular/router';
 })
 export class BasicFormComponent implements OnInit {
   basicFormControl: BasicFormControl;
+
+  @ViewChild(MyPopupComponent)
+  popup: MyPopupComponent;
 
   roleList: string[] = ['Engineer', 'Programmer', 'Student'];
 
@@ -51,5 +55,9 @@ export class BasicFormComponent implements OnInit {
     let tmp = text.substring(0, 1).toUpperCase();
     tmp = tmp + text.substring(1);
     return tmp;
+  }
+
+  openPopUp() {
+    this.popup.open();
   }
 }

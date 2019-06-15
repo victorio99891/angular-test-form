@@ -13,6 +13,7 @@ import { EngineerHomePageComponent } from './engineer-home-page/engineer-home-pa
 import { ProgrammerHomePageComponent } from './programmer-home-page/programmer-home-page.component';
 import { StudentHomePageComponent } from './student-home-page/student-home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { MyPopupComponent } from './my-popup/my-popup.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     EngineerHomePageComponent,
     ProgrammerHomePageComponent,
     StudentHomePageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MyPopupComponent
   ],
   imports: [
     BrowserModule,

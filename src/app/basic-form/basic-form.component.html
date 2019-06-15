@@ -29,4 +29,16 @@
 <div style="align-content: center; text-align: center; margin-top: 25px;">
   <button (click)="submit()">Submit form!</button>
 </div>
-
+<div>
+  <button (click)="openPopUp()">Open popup!</button>
+</div>
+<div>
+  <my-popup [closeWhenOutOfFocus]="false">
+    <div>
+      <label>
+        asd:
+        <input />
+      </label>
+    </div>
+  </my-popup>
+</div>
