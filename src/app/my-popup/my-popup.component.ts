@@ -1,10 +1,18 @@
-import { Component, OnInit, Input, ElementRef, OnDestroy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ElementRef,
+  OnDestroy,
+  ViewEncapsulation
+} from '@angular/core';
 
 @Component({
   // tslint:disable-next-line: component-selector
   selector: 'my-popup',
   templateUrl: './my-popup.component.html',
-  styleUrls: ['./my-popup.component.css']
+  styleUrls: ['./my-popup.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class MyPopupComponent implements OnInit, OnDestroy {
   @Input()

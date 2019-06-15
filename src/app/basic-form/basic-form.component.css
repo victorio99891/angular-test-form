@@ -10,7 +10,7 @@
   margin-top: 10px;
 }
 
-my-popup {
+/* my-popup {
   display: none;
   position: fixed;
   left: 0;
@@ -20,4 +20,4 @@ my-popup {
   background: rgba(0, 0, 0, 0.5);
   z-index: 10;
   overflow: auto;
-}
+} */
